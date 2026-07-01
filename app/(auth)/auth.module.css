@@ -1,0 +1,103 @@
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.authBg { position: absolute; inset: 0; overflow: hidden; }
+
+.authOrb1 {
+  position: absolute;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: var(--accent);
+  filter: blur(110px);
+  opacity: 0.1;
+  top: -12%; right: -10%;
+  animation: orbFloat 24s ease-in-out infinite;
+}
+.authOrb2 {
+  position: absolute;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  filter: blur(110px);
+  opacity: 0.1;
+  bottom: -12%; left: -10%;
+  animation: orbFloat 24s ease-in-out infinite;
+  animation-delay: -12s;
+}
+
+.authCard {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 2.5rem;
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.authCard h2 { font-size: 1.55rem; margin-bottom: 0.4rem; }
+
+.authLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+.authLogo:hover { color: var(--text-primary); }
+
+.authSubtitle {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1.75rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 1.5rem 0;
+  color: var(--text-tertiary);
+  font-size: 0.78rem;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.divider span { white-space: nowrap; }
+
+.authForm { margin-bottom: 1.5rem; }
+
+.authError {
+  background: hsla(0, 72%, 60%, 0.1);
+  border: 1px solid hsla(0, 72%, 60%, 0.22);
+  color: var(--danger);
+  font-size: 0.85rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.authSwitch {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+.authSwitch a { color: var(--accent); font-weight: 500; }
